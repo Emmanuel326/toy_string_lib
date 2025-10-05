@@ -1,15 +1,17 @@
-#include <stdio.h>
-#include "../include/mini_string.h"// this is my own header
+#include <stdio.h> //this is for printf() functions
+#include "../mini_string_lib/include/mini_string.h" //this is my [my_strnlrn declaration]
 
-int main(void)
+
+int main()
 {
-  const char *test_str = "Hi C monks";
-  size_t len = my_strlen(test_str);
+const char *s = "Hi there C veterans!! this is going to be fun";
+size_t max = 50;
 
+// call the string length function
+size_t len = my_strnlen(str, max);
 
-  printf("String: \"%s\"\n", test_str);
-  printf("Calculated length  (my_strlen): %zu\n", len);
-
-  //the output should be 10 by the way 
-  return 0;
+//print the output
+printf("The length of the string is: %zu\n", len);
+return 0;
 }
+

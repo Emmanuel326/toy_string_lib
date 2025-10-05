@@ -1,23 +1,17 @@
-// src/mini_string.c
+//1. include the custome file for the declaration
+//using a relative path
 
 #include "../include/mini_string.h"
 
-// this is the first basic implementation of  finding length
-size_t my_strlen(const char *s) {
-    // You can use a pointer to iterate and calculate the difference
-    const char *p = s;
-    while (*p != '\0') {
-        p++;
-    }
-    // The difference between the end pointer and the start pointer is the length
-    return (size_t)(p - s);
-    
-    /* Alternative, slightly simpler implementation:
-    size_t count = 0;
-    while (*s != '\0') {
-        count++;
-        s++;
-    }
-    return count;
-    */
+//2.below is the defination implementation of the function
+size_t my_strnlen(const char *s, size_t maxlen)
+{
+  size_t length = 0;
+  while (*s != '\0' && length < maxlen)
+  {
+	  length++;
+	  s++;
+
+  }
+  return length;
 }
