@@ -11,7 +11,7 @@ TARGET = $(BUILD_DIR)/test_mini_string
 OBJS = $(BUILD_DIR)/main.o $(BUILD_DIR)/mini_string.o
 
 # Target 1: The default target (run 'make' to build this)
-all: $(TARGET)
+all: $(TARGET) 
 
 # Rule 1: Link the object files to create the final executable
 $(TARGET): $(OBJS)
